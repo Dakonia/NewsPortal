@@ -1,3 +1,37 @@
-from django.shortcuts import render
+from datetime import datetime
+from django.views.generic import ListView, DetailView
+from .models import Post
+from django.utils import timezone
 
-# Create your views here.
+
+class PostList(ListView):
+
+    model = Post
+    ordering = 'text'
+    template_name = 'post.html'
+    context_object_name = 'post'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['time_now'] = datetime.utcnow()
+        context['next_sale'] = None
+        return context
+
+
+    def get_queryset(self):
+        times = Post.objects.all().order_by('-dateCreation')
+        return times
+
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = 'news.html'
+    context_object_name = 'news'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['time_now'] = datetime.utcnow()
+        context['next_sale'] = None
+        return context
+
+
