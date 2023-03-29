@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.db.models import Sum
 from datetime import datetime
 from django.core.validators import MinValueValidator
+from django.urls import reverse
 
 
 class Author(models.Model):
@@ -32,13 +33,14 @@ class Category(models.Model):
 
 
 class Post(models.Model):
-    author = models.ForeignKey(Author, on_delete=models.CASCADE,)
     NEWS = 'NW'
     ARTICLE = 'AR'
     CATEGORY_CHOICES = [
         (NEWS, 'Новость'),
         (ARTICLE, 'Статья'),
     ]
+
+    author = models.ForeignKey(Author, on_delete=models.CASCADE,)
     categoryType = models.CharField(max_length=2, choices=CATEGORY_CHOICES, default=ARTICLE)
     dateCreation = models.DateTimeField(auto_now_add=True)
     postCategory = models.ManyToManyField(Category, through='PostCategory')
@@ -59,6 +61,9 @@ class Post(models.Model):
 
     def preview(self):
         return self.text[0:123] + '...'
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
 
 
 class PostCategory(models.Model):
