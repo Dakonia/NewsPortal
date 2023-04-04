@@ -25,6 +25,8 @@ class Author(models.Model):
         self.save()
 
 
+
+
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
 

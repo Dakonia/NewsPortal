@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,7 +17,7 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
    <div class="container">
-       <a class="navbar-brand" href="/news">Новостной портал</a>
+       <a class="navbar-brand" href="/news"><h3>Новостной портал</h3></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse"
                data-target="#navbarResponsive"
                aria-controls="navbarResponsive" aria-expanded="false"
@@ -28,11 +28,9 @@
            <ul class="navbar-nav ml-auto">
 
                <li class="nav-item">
-                   <a class="nav-link" href="create"><h3>Добавить пост </h3></a>
+                   <a class="nav-link" href="{% url 'post_search' %}"><h4>Поиск</h4></a>
                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="search"><h3>Поиск</h3></a>
-               </li>
+
            </ul>
        </div>
    </div>
@@ -48,4 +46,10 @@
             </div>
         </div>
     </body>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'account_logout' %}"><div align="right"><h4>Выйти</h4></div>></a>
+    {% else %}
+    <a href="{% url 'account_login' %}"><div align="right"><h4>Вoйти</h4></div>></a>
+    {% endif %}
+
 </html>

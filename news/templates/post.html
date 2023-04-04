@@ -11,12 +11,22 @@ Post
     <h3>{{ time_now|date:'M d Y' }}</h3>
 
    <hr>
-   {% if post %}
+
+   {% if perms.new.add_post %}
+<p><a href="{% url 'post_create' %}"><h4>Добавить статю</h4></a></p>
+    {% endif %}
+
+
+    {% if post %}
        <table>
            <tr>
                <td>Заголовок</td>
                <td>Дата публикации</td>
                <td>Статья</td>
+               {% if perms.new.change_post or perms.new.delete_post %}
+                <td>Действия</td>
+                {% endif %}
+
            </tr>
 
            {% for posts in post %}
@@ -24,6 +34,14 @@ Post
                <td>{{ posts.tittle|censor }}</td>
                <td>{{ posts.dateCreation|date:'M d Y'}}</td>
                <td>{{ posts.text|truncatechars:20|censor}}</td>
+               <td>
+                    {% if perms.new.change_post %}
+                    <a href="{% url 'post_update' pk=posts.id %}">Изменить</a>
+                    {% endif %}
+                    {% if perms.new.delete_post and post.author %}
+                    <a href="{% url 'post_delete' posts.id %}">Удалить</a>
+                    {% endif %}
+                </td>
            </tr>
            {% endfor %}
 

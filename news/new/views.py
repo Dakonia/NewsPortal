@@ -5,6 +5,8 @@ from django.utils import timezone
 from .filters import PostFilter
 from .forms import PostForm
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class PostList(ListView):
 
@@ -56,20 +58,27 @@ class NewsSearch(ListView):
         return context
 
 
-class PostCreate(CreateView):
+class PostCreate(PermissionRequiredMixin, CreateView):
+    permission_required = ('new.add_post',)
+    raise_exception = True
+    form_class = PostForm
+    model = Post
+    template_name = 'news_edit.html'
+
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user.author
+    #     return super().form_valid(form)
+
+
+class PostUpdate(PermissionRequiredMixin, UpdateView):
+    permission_required = ('new.change_post',)
     form_class = PostForm
     model = Post
     template_name = 'news_edit.html'
 
 
-
-class PostUpdate(UpdateView):
-    form_class = PostForm
-    model = Post
-    template_name = 'news_edit.html'
-
-
-class PostDelete(DeleteView):
+class PostDelete(PermissionRequiredMixin, DeleteView):
+    permission_required = ('new.delete_post',)
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')

@@ -12,6 +12,8 @@ class PostForm(forms.ModelForm):
             'text',
         ]
 
+
+
     def clean_tittle(self):
         tittle = self.cleaned_data["tittle"]
         if tittle[0].islower():
