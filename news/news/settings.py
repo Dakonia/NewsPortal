@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'new',
+    'new.apps.NewConfig',
     'django.contrib.sites',
     'django.contrib.flatpages',
     'django_filters',
@@ -135,6 +135,7 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = "/news"
 LOGOUT_REDIRECT_URL = '/news'
+SITE_URL = 'http://127.0.0.1:8000'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -152,15 +153,15 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.yandex.ru'
-# EMAIL_PORT = 465
-# EMAIL_HOST_USER = "supp0rt.news@yandex.ru"
-# EMAIL_HOST_PASSWORD = "psxkrcedeuxyqkjo"
-# EMAIL_USE_TLS = False
-# EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "supp0rt.news@yandex.ru"
+EMAIL_HOST_PASSWORD = "psxkrcedeuxyqkjo"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
-# DEFAULT_FROM_EMAIL = "example@yandex.ru"
-#
+DEFAULT_FROM_EMAIL = "supp0rt.news@yandex.ru"
+
 
 # SERVER_EMAIL = "example@yandex.ru"
 # MANAGERS = (
