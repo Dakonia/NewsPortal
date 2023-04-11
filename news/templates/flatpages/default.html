@@ -1,7 +1,8 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -30,6 +31,13 @@
                <li class="nav-item">
                    <a class="nav-link" href="{% url 'post_search' %}"><h4>Поиск</h4></a>
                </li>
+               <li>
+                   {% if not is_author %}
+                   <a class="nav-link" href="{% url 'account_upgrade' %}">
+            <h4><strong>Стать Автором!</strong></h4>
+                   {% endif %}
+        </a>
+               </li>
 
            </ul>
        </div>
@@ -47,9 +55,13 @@
         </div>
     </body>
     {% if request.user.is_authenticated %}
-    <a href="{% url 'account_logout' %}"><div align="right"><h4>Выйти</h4></div>></a>
+    <button>
+    <a class="nav-link" href="{% url 'account_logout' %}"<h4>Выйти</h4>></a>
+    </button>
     {% else %}
-    <a href="{% url 'account_login' %}"><div align="right"><h4>Вoйти</h4></div>></a>
+    <button>
+    <a class="nav-link" href="{% url 'account_login' %}"><h4>Вoйти</h4>></a>
+    </button>
     {% endif %}
 
 </html>

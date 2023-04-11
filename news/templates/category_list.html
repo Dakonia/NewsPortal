@@ -10,39 +10,28 @@ Post
 
     <h3>{{ time_now|date:'M d Y' }}</h3>
 
-   <hr>
-
-   {% if perms.new.add_post %}
-<p><a href="{% url 'post_create' %}"><h4>Добавить статю</h4></a></p>
+    {% if is_not_subscriber %}
+    <p class="text-centre"><a href="{% url 'subscribe' postCategory.id %}" class="btn btn-secondary btn-sm">Подписаться </a> </p>
     {% endif %}
 
-
-    {% if post %}
+    <hr>
+    {% if category_news_list %}
        <table>
            <tr>
                <td>Заголовок</td>
                <td>Дата публикации</td>
                <td>Статья</td>
-               {% if perms.new.change_post or perms.new.delete_post %}
-                <td>Действия</td>
-                {% endif %}
                 <td>Категория</td>
-
            </tr>
 
-           {% for posts in post %}
+           {% for posts in category_news_list %}
            <tr>
-               <td>{{ posts.tittle|censor }}</td>
+               <td>
+                   <a href="{% url 'post_detail' posts.id %}"> {{ posts.tittle|censor }}</a>
+               </td>
+
                <td>{{ posts.dateCreation|date:'M d Y'}}</td>
                <td>{{ posts.text|truncatechars:20|censor}}</td>
-               <td>
-                    {% if posts.author == request.user.author %}
-                    <a href="{% url 'post_update' pk=posts.id %}">Изменить</a>
-                    {% endif %}
-                    {% if perms.new.delete_post %}
-                    <a href="{% url 'post_delete' posts.id %}">Удалить</a>
-                    {% endif %}
-                </td>
                <td>
                    {% for category in posts.postCategory.all %}
                     <a href="{% url 'category_list' category.id %}">{{ category }}</a>
