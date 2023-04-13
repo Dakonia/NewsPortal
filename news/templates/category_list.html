@@ -12,8 +12,11 @@ Post
 
     {% if is_not_subscriber %}
     <p class="text-centre"><a href="{% url 'subscribe' postCategory.id %}" class="btn btn-secondary btn-sm">Подписаться </a> </p>
-    {% endif %}
 
+
+    {% else %}
+    <p class="text-centre"><a href="{% url 'not_subscribe' postCategory.id %}" class="btn btn-secondary btn-sm">Отписаться </a> </p>
+    {% endif %}
     <hr>
     {% if category_news_list %}
        <table>

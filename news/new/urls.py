@@ -1,6 +1,5 @@
 from django.urls import path
-# Импортируем созданное нами представление
-from .views import (PostList, PostDetail, NewsSearch, PostCreate, PostUpdate, PostDelete, CategoryListView, subscribe)
+from .views import (PostList, PostDetail, NewsSearch, PostCreate, PostUpdate, PostDelete, CategoryListView, subscribe, not_subscribe,)
 from .models import Post
 from .filters import PostFilter
 
@@ -13,5 +12,9 @@ urlpatterns = [
          path('<int:pk>/delete/', PostDelete.as_view(), name='post_delete'),
          path('categories/<int:pk>', CategoryListView.as_view(), name='category_list'),
          path('categories/<int:pk>/subscribe', subscribe, name='subscribe'),
+         path('categories/<int:pk>/not_subscribe', not_subscribe, name='not_subscribe'),
+
 ]
+
+
 

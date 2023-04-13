@@ -8,7 +8,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
-
+from django.views.decorators.csrf import csrf_protect
+from django.db.models import Exists, OuterRef
 
 class PostList(ListView):
 
@@ -119,5 +120,18 @@ def subscribe(request, pk):
     category = Category.objects.get(id=pk)
     category.subscribers.add(user)
 
+
     message = 'Вы успешно подписались на расылку Новостей категории:'
     return render(request, 'subscribe.html', {'category':category, 'message':message})
+
+
+@login_required
+def not_subscribe(request, pk):
+    user = request.user
+    category = Category.objects.get(id=pk)
+    category.subscribers.remove(user)
+
+    message = 'Вы отписались от подписки на категорию:'
+    return render(request, 'subscribe.html', {'category':category, 'message':message})
+
+
