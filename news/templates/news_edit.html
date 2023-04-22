@@ -1,5 +1,6 @@
 {% extends 'flatpages/default.html' %}
-
+{% load cache %}
+    {% cache 10 heder %}
 {% block content %}
 <h1>Новость!</h1>
 <hr>
@@ -9,3 +10,4 @@
     <input type="submit" value="Save" />
 </form>
 {% endblock content %}
+{% endcache %}

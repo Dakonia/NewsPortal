@@ -10,6 +10,7 @@ from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
 from django.db.models import Exists, OuterRef
+from django.core.cache import cache
 
 class PostList(ListView):
 
@@ -50,6 +51,15 @@ class PostDetail(DetailView):
         context['time_now'] = datetime.utcnow()
         context['next_sale'] = None
         return context
+
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'news-{self.kwargs["pk"]}', None)
+
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'news-{self.kwargs["pk"]}', obj)
+
+        return obj
 
 
 class NewsSearch(ListView):
