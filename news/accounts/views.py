@@ -4,6 +4,7 @@ from django.contrib.auth.models import Group
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
+# Создаем функцию что бы делать Пользавателя Автором
 @login_required
 def upgrade_user(request):
     user = request.user

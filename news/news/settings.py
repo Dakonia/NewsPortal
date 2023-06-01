@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -170,9 +171,9 @@ DEFAULT_FROM_EMAIL = "supp0rt.news@yandex.ru"
 #     ('Vlad', 'dakonia13@mail.ru'),
 # )
 #
-# ADMINS = (
-#     ('Vlad', 'dakonia13@mail.ru'),
-# )
+ADMINS = (
+    ('Vlad', 'dakonia13@mail.ru'),
+)
 
 APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 APSCHEDULER_RUN_NOW_TIMEOUT =25
@@ -190,4 +191,112 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
     }
+}
+
+
+LOGGING = {
+    'version':1,
+    'disable_existing_logger':False,
+    'loggers':{
+        'django' :{
+            'handlers': ['console', 'consolewarning', 'consoleerror', 'new'],
+            'level': 'DEBUG',
+        },
+        'django.request' :{
+            'handlers': ['mail_admins', 'errorslog'],
+            'level': 'ERROR',
+        },
+        'django.server' :{
+            'handlers': ['mail_admins', 'errorslog'],
+            'level': 'ERROR',
+        },
+        'django.template' :{
+            'handlers': ['errorslog'],
+            'level': 'ERROR',
+        },
+        'django.db.backends' :{
+            'handlers': ['errorslog'],
+            'level': 'ERROR',
+        },
+        'django.security' :{
+            'handlers': ['securitylog'],
+            'level': 'ERROR',
+        },
+    },
+    'handlers':{
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'formatwarning',
+            'filters': ['require_debug_false'],
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'formatconsole',
+            'filters': ['require_debug_true'],
+        },
+        'consolewarning': {
+            'level': 'WARNING',
+            'class': 'logging.StreamHandler',
+            'formatter': 'formatwarning',
+            'filters': ['require_debug_true'],
+        },
+        'consoleerror': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
+            'formatter': 'formaterror',
+            'filters': ['require_debug_true'],
+        },
+        'new': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename':'general.log',
+            'formatter': 'myformatter',
+            'filters': ['require_debug_false'],
+        },
+        'errorslog':{
+            'level' : 'INFO',
+            'class': 'logging.FileHandler',
+            'filename':'errors.log',
+            'formatter':'formaterror',
+        },
+        'securitylog':{
+            'level' : 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'security.log',
+            'formatter': 'myformatter',
+        },
+    },
+    'formatters': {
+        'myformatter': {
+            'format': '{asctime} {levelname} {module} {message}',
+            'datetime': '%Y.%m.%.%d %H:%M:%S',
+            'style': '{',
+        },
+        'formatconsole': {
+            'format':'{asctime} {levelname} {message}',
+            'datetime': '%Y.%m.%.%d %H:%M:%S',
+            'style' : '{',
+        },
+        'formatwarning': {
+            'format':'{asctime} {levelname} {pathname} {message}',
+            'datetime': '%Y.%m.%.%d %H:%M:%S',
+            'style' : '{',
+        },
+        'formaterror': {
+            'format':'{asctime} {levelname} {pathname} {exc_info} {message}',
+            'datetime': '%Y.%m.%.%d %H:%M:%S',
+            'style' : '{',
+        },
+    },
+    'filters': {
+            'require_debug_false' :{
+                '()': 'django.utils.log.RequireDebugFalse',
+            },
+            'require_debug_true' :{
+                '()': 'django.utils.log.RequireDebugTrue',
+            },
+        },
+
 }

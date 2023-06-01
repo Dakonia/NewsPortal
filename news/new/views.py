@@ -11,9 +11,12 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
 from django.db.models import Exists, OuterRef
 from django.core.cache import cache
+import logging
+
+logger = logging.getLogger(__name__)
 
 class PostList(ListView):
-
+    logger.info('INFO')
     model = Post
     ordering = 'text'
     template_name = 'post.html'
@@ -28,12 +31,6 @@ class PostList(ListView):
         context['next_sale'] = None
         return context
 
-    # def get_cotext_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['time_now'] = datetime.utcnow()
-    #     context['next_sale'] = None
-    #     return context
-
 
 
     def get_queryset(self):
@@ -42,6 +39,7 @@ class PostList(ListView):
 
 
 class PostDetail(DetailView):
+    logger.info('INFO')
     model = Post
     template_name = 'news.html'
     context_object_name = 'news'
@@ -63,6 +61,7 @@ class PostDetail(DetailView):
 
 
 class NewsSearch(ListView):
+    logger.info('INFO')
     model = Post
     template_name = 'search.html'
     context_object_name = 'post'
@@ -80,6 +79,7 @@ class NewsSearch(ListView):
 
 
 class PostCreate(PermissionRequiredMixin, CreateView):
+    logger.info('INFO')
     permission_required = ('new.add_post',)
     raise_exception = True
     form_class = PostForm
@@ -92,6 +92,7 @@ class PostCreate(PermissionRequiredMixin, CreateView):
 
 
 class PostUpdate(PermissionRequiredMixin, UpdateView):
+    logger.info('INFO')
     permission_required = ('new.change_post',)
     form_class = PostForm
     model = Post
@@ -99,6 +100,7 @@ class PostUpdate(PermissionRequiredMixin, UpdateView):
 
 
 class PostDelete(PermissionRequiredMixin, DeleteView):
+    logger.info('INFO')
     permission_required = ('new.delete_post',)
     model = Post
     template_name = 'post_delete.html'
@@ -106,6 +108,7 @@ class PostDelete(PermissionRequiredMixin, DeleteView):
 
 
 class CategoryListView(ListView):
+    logger.info('INFO')
     model = Post
     template_name = 'category_list.html'
     context_object_name = 'category_news_list'

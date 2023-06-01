@@ -1,0 +1,23 @@
+File /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py previous mtime: 1685622031.2353923, current mtime: 1685622325.8049629
+/Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py notified as changed. Signal results: [(<function template_changed at 0x1057cd630>, None), (<function translation_file_changed at 0x1065ad2d0>, None)].
+/Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /news/ HTTP/1.1" 200 6448
+/Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+INFO Watching for file changes with StatReloader
+WARNING Not Found: /
+WARNING "GET / HTTP/1.1" 404 2379
+WARNING Not Found: /
+WARNING "GET / HTTP/1.1" 404 2379
+INFO "GET /news/ HTTP/1.1" 200 6448
+INFO /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 14:28:51,418 INFO Watching for file changes with StatReloader
+2023-06-01 14:28:56,802 INFO "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 14:41:06,850 INFO /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 14:41:08,018 INFO Watching for file changes with StatReloader
+2023-06-01 14:41:27,247 INFO /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 14:41:28,308 INFO Watching for file changes with StatReloader
+2023-06-01 14:54:27,770 INFO /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 15:24:52,501 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 15:25:00,970 INFO basehttp "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 18:21:35,062 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.

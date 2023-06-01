@@ -1,0 +1,138 @@
+2023-06-01 20:14:43,196 WARNING /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py None Not Found: /
+2023-06-01 20:14:43,197 WARNING /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None "GET / HTTP/1.1" 404 2379
+2023-06-01 20:14:47,464 WARNING /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py None Not Found: /
+2023-06-01 20:14:47,464 WARNING /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None "GET / HTTP/1.1" 404 2379
+2023-06-01 20:14:47,874 INFO /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 20:14:50,608 INFO /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None "GET /news/categories/1 HTTP/1.1" 200 5035
+2023-06-01 20:22:18,443 ERROR /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/utils/log.py (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 61 connecting to localhost:6379. Connection refused.'), <traceback object at 0x11218a440>) Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 698, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 699, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 987, in _connect
+    raise err
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 975, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 1442, in get_connection
+    connection.connect()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 704, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 698, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 699, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 987, in _connect
+    raise err
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 975, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 168, in _consume_from
+    with self.reconnect_on_error():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 1442, in get_connection
+    connection.connect()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 704, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/news/new/views.py", line 91, in form_valid
+    return super().form_valid(form)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/forms/models.py", line 549, in save
+    self._save_m2m()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/forms/models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/news/new/signals.py", line 33, in notify_about_new_post
+    new_post_notify.delay(instance.id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/base.py", line 785, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 61 connecting to localhost:6379. Connection refused.
+2023-06-01 20:22:18,797 ERROR /Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/servers/basehttp.py None "POST /news/create/ HTTP/1.1" 500 311686

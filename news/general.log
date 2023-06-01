@@ -1,0 +1,238 @@
+2023-06-01 18:21:36,128 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:23:03,367 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:32:42,116 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:32:48,465 INFO basehttp "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 18:32:49,670 INFO basehttp "GET /upgrade/upgrade/ HTTP/1.1" 302 0
+2023-06-01 18:32:49,700 INFO basehttp "GET /accounts/login/?next=/upgrade/upgrade/ HTTP/1.1" 200 1935
+2023-06-01 18:35:59,086 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:36:00,032 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:36:03,195 INFO basehttp "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 18:36:04,093 INFO basehttp "GET /upgrade/upgrade/ HTTP/1.1" 302 0
+2023-06-01 18:36:04,123 INFO basehttp "GET /accounts/login/?next=/upgrade/upgrade/ HTTP/1.1" 200 1935
+2023-06-01 18:38:19,057 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:38:19,457 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:39:37,748 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:39:38,095 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:39:55,528 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:39:56,060 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:40:37,800 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:47:10,240 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:48:20,967 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 18:51:16,713 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 18:51:32,604 INFO basehttp "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 18:51:43,076 INFO basehttp "GET /news/categories/1 HTTP/1.1" 200 5035
+2023-06-01 18:53:22,214 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:00:24,005 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:04:36,875 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:04:58,504 INFO basehttp "GET /news/search HTTP/1.1" 200 4091
+2023-06-01 19:04:59,575 INFO basehttp "GET /news/ HTTP/1.1" 200 6448
+2023-06-01 19:05:00,367 INFO basehttp "GET /upgrade/upgrade/ HTTP/1.1" 302 0
+2023-06-01 19:05:00,400 INFO basehttp "GET /accounts/login/?next=/upgrade/upgrade/ HTTP/1.1" 200 1935
+2023-06-01 19:05:06,051 INFO basehttp "GET /accounts/signup/ HTTP/1.1" 200 1444
+2023-06-01 19:05:07,154 INFO basehttp "GET /accounts/login/ HTTP/1.1" 200 1810
+2023-06-01 19:06:40,716 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:06:41,800 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:14:09,887 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:14:10,933 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:14:39,588 INFO basehttp "GET /news/categories/1 HTTP/1.1" 200 5035
+2023-06-01 19:14:43,487 INFO basehttp "GET /news/categories/1/subscribe HTTP/1.1" 302 0
+2023-06-01 19:14:43,523 INFO basehttp "GET /accounts/login/?next=/news/categories/1/subscribe HTTP/1.1" 200 1972
+2023-06-01 19:16:06,615 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:16:07,308 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:17:20,457 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:17:21,517 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:18:05,694 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:18:06,726 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:18:28,827 INFO basehttp "GET /news/categories/1 HTTP/1.1" 200 5035
+2023-06-01 19:18:29,583 INFO basehttp "GET /news/categories/1/subscribe HTTP/1.1" 302 0
+2023-06-01 19:18:29,617 INFO basehttp "GET /accounts/login/?next=/news/categories/1/subscribe HTTP/1.1" 200 1972
+2023-06-01 19:19:26,916 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:19:27,582 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:21:34,236 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:21:35,204 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:22:31,549 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:22:32,270 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:26:57,186 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:26:58,194 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:29:22,443 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:29:23,472 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:30:48,683 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:30:49,684 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:32:17,144 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:32:18,264 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:32:32,238 INFO basehttp "GET /news/14 HTTP/1.1" 200 2184
+2023-06-01 19:32:33,778 INFO basehttp "GET /news/search HTTP/1.1" 200 4091
+2023-06-01 19:32:34,410 INFO basehttp "GET /upgrade/upgrade/ HTTP/1.1" 302 0
+2023-06-01 19:32:34,482 INFO basehttp "GET /accounts/login/?next=/upgrade/upgrade/ HTTP/1.1" 200 1935
+2023-06-01 19:32:37,089 INFO basehttp "GET /accounts/signup/ HTTP/1.1" 200 1444
+2023-06-01 19:32:37,982 INFO basehttp "GET /accounts/login/ HTTP/1.1" 200 1810
+2023-06-01 19:33:31,589 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:33:32,727 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:34:39,369 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:34:40,269 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:35:11,880 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:35:40,190 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:36:28,628 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/new/views.py changed, reloading.
+2023-06-01 19:36:29,228 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:36:54,269 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/new/views.py changed, reloading.
+2023-06-01 19:36:54,876 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:38:41,164 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:42:09,995 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:42:37,396 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:43:55,780 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:46:09,424 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 19:49:33,029 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 19:52:36,741 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:09:45,570 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:12:17,505 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:12:18,585 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:13:21,318 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:13:21,933 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:14:36,926 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:14:38,034 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:14:43,196 WARNING log Not Found: /
+2023-06-01 20:14:47,464 WARNING log Not Found: /
+2023-06-01 20:16:42,871 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:16:44,014 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:18:42,841 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:21:13,188 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:22:18,443 ERROR log Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 698, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 699, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 987, in _connect
+    raise err
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 975, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 1442, in get_connection
+    connection.connect()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 704, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 698, in connect
+    sock = self.retry.call_with_retry(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 699, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 987, in _connect
+    raise err
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 975, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 168, in _consume_from
+    with self.reconnect_on_error():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 1442, in get_connection
+    connection.connect()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/redis/connection.py", line 704, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 109, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/news/new/views.py", line 91, in form_valid
+    return super().form_valid(form)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 135, in form_valid
+    self.object = form.save()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/forms/models.py", line 549, in save
+    self._save_m2m()
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/forms/models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1169, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1087, in add
+    self._add_items(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1373, in _add_items
+    signals.m2m_changed.send(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/news/new/signals.py", line 33, in notify_about_new_post
+    new_post_notify.delay(instance.id)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/celery/app/base.py", line 785, in send_task
+    with P.connection._reraise_as_library_errors():
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/vladvaraksin/PycharmProjects/NewsPortal/venv/lib/python3.10/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 61 connecting to localhost:6379. Connection refused.
+2023-06-01 20:30:38,459 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:30:39,535 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:31:27,684 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:34:19,712 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:36:01,460 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:36:02,149 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:37:07,710 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
+2023-06-01 20:37:08,335 INFO autoreload Watching for file changes with StatReloader
+2023-06-01 20:38:30,522 INFO autoreload /Users/vladvaraksin/PycharmProjects/NewsPortal/news/news/settings.py changed, reloading.
